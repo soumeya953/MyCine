@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FilmService } from '../@shared/services/film.service';
+import { Film } from '../@shared/models/film';
+
 
 @Component({
   selector: 'app-my-films',
@@ -6,15 +9,18 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./my-films.component.css']
 })
 export class MyFilmsComponent implements OnInit {
+  @Input() films:Film[] = []; // décorer la propriété avec @Input()
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(private filmService: FilmService) {
   }
 
-
-  @Input() films:any = []; // décorer la propriété avec @Input()
-
-
+  ngOnInit() {
+  //  this._httpClient.get(this.films);
+    this.filmService.getFilms().subscribe(films => {
+      console.warn(films)
+      this.films = films;
+    });
+  }
 
 }

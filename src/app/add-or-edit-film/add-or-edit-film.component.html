@@ -1,23 +1,29 @@
-<p>Formulaire d'ajout de films</p>
-<form
-        [formGroup]="filmForm"
-        (ngSubmit)="submitFilm()" >
-    <p> Titre
-      <input
-            type="text"
-            formControlName="titre" >
-    </p>
-    <p> Synopsis
-      <textarea formControlName = "synopsis" ></textarea>
-    </p>
-    <p> Note
-      <input
-            type="text"
-            formControlName="note" > / 10
-    </p>
+<div class="container">
+  <form  class="form-group"
+          [formGroup]="filmForm"
+          (ngSubmit)="submitFilm()" >
+      <p>Formulaire d'ajout de films</p>
+      <p> Titre
+        <input
+              type="text"
+              formControlName="titre"
+              placeholder="Titre"
+              >
+      </p>
+      <p> Synopsis
+        <textarea formControlName = "synopsis"
+        placeholder="Synopsis" ></textarea>
+      </p>
+      <p> Note
+        <input
+              type="text"
+              formControlName="note"
+              placeholder="Note"> / 10
+      </p>
 
 
-    <button [disabled]="!filmForm.valid" (click)="addNewFilm()" type="submit">ajouter
-    </button>  <!-- disabled : le bouton n'est pas cliquable tant que les champs ne sont pas remplis -->
+      <button [disabled]="!filmForm.valid" (click)="addNewFilm()" type="submit" class="btn btn-outline-dark">Ajouter
+      </button>  <!-- disabled : le bouton n'est pas cliquable tant que les champs ne sont pas remplis -->
 
-</form>
+  </form>
+</div>

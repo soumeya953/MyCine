@@ -1,0 +1,11 @@
+
+form{
+  background-color: white;
+  font-family : inherit;
+
+  text-align: center;
+  margin: 330px;
+  padding: 50px;
+  border-color: black;
+  border-width: 5px;
+}
