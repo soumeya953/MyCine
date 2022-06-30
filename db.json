@@ -1,8 +1,16 @@
 {
-
-    "films": [
-
-    ]
-
-
+  "films": [
+    {
+      "id": 0,
+      "title": "Spiderman",
+      "synopsis": "pas de description",
+      "note": 5
+    },
+    {
+      "title": "test",
+      "synopsis": "no description",
+      "note": "5",
+      "id": 1
+    }
+  ]
 }

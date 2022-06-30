@@ -20,9 +20,7 @@
               formControlName="note"
               placeholder="Note"> / 10
       </p>
-
-
-      <button [disabled]="!filmForm.valid" (click)="addNewFilm()" type="submit" class="btn btn-outline-dark">Ajouter
+      <button [disabled]="!filmForm.valid" (click)="addFilm()" type="submit" class="btn btn-outline-dark">Ajouter
       </button>  <!-- disabled : le bouton n'est pas cliquable tant que les champs ne sont pas remplis -->
 
   </form>
