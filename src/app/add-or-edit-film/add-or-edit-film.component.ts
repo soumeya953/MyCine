@@ -36,7 +36,7 @@ export class AddOrEditFilmComponent implements OnInit {
     //this.newItemEvent.emit(value);
   }
 
-  addFilm(){
+  addFilm() {
     this.filmService.addFilm({
       title: this.filmForm.controls.titre.value as string,
       synopsis: this.filmForm.controls.synopsis.value,
